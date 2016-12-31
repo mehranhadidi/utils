@@ -9,7 +9,7 @@
             "email": "mehran.hadidi@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability":"dev",
     "require": {
         "php": ">=7",
         "guzzlehttp/guzzle": "^6.2"
