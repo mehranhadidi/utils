@@ -1,0 +1,22 @@
+{
+    "name": "shr/utils",
+    "description": "This package contains some utils and additional tools that will use to make life a little easier (ee tools)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mehran Hadidi",
+            "email": "mehran.hadidi@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "SHR": "src/"
+        }
+    }
+}
