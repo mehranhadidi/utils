@@ -9,11 +9,3 @@ if( ! function_exists('user'))
         return \Request::get('authenticated_user');
     }
 }
-
-if( ! function_exists('test'))
-{
-    function test()
-    {
-        return 'test is working';
-    }
-}
