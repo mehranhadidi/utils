@@ -9,7 +9,7 @@ class CallService
 	const POST = 'POST';
     const GET = 'GET';
 
-    public static function send($type, $url, $token = null, $headers = [], $body = [], $checkException = true)
+    public static function send($type, $url, $token = null, $headers = [], $body = null, $checkException = true)
     {
         // default headers for every request
         $defaultHeaders = [
@@ -21,6 +21,8 @@ class CallService
         if( ! is_null($token))
             $defaultHeaders['Authorization'] = 'Bearer ' . $token;
 
+        if( ! is_null($body))
+            $body = ['form_params' => (array) $body];
 
         // combine user custom headers with defaults
         $headers = array_merge($headers, $defaultHeaders);
