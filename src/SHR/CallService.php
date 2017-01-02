@@ -9,7 +9,7 @@ class CallService
 	const POST = 'POST';
     const GET = 'GET';
 
-    public static function send($type, $url, $token = null, $headers = [], $checkException = true)
+    public static function send($type, $url, $token = null, $headers = [], $body = [], $checkException = true)
     {
         // default headers for every request
         $defaultHeaders = [
@@ -33,10 +33,8 @@ class CallService
                     'headers' => $headers
                 ]);
 
-                // send user token to user-management
-                $response = $client->request($type, $url);
+                $response = $client->request($type, $url, $body);
 
-                // response data as string
                 $data = $response->getBody()->getContents();
 
                 // if data is json return the object, if not return as string
