@@ -21,7 +21,7 @@ class CallService
         if( ! is_null($token))
             $defaultHeaders['Authorization'] = 'Bearer ' . $token;
 
-        if( ! is_null($body))
+        if( ! empty($body))
             $body = ['form_params' => (array) $body];
 
         // combine user custom headers with defaults
