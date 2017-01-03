@@ -9,7 +9,7 @@ class CallService
 	const POST = 'POST';
     const GET = 'GET';
 
-    public static function send($type, $url, $token = null, $headers = [], $body = null, $checkException = true)
+    public static function send($type, $url, $token = null, $headers = [], $body = [], $checkException = true)
     {
         // default headers for every request
         $defaultHeaders = [
