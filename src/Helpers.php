@@ -18,7 +18,7 @@ if( ! function_exists('validationError'))
     function validationError($errors, $message = null)
     {
         return response()->json([
-            'message' => $message ?: trans('response.validation_error'),
+            'message' => $message ?: trans('validation.message'),
             'errors'  => $errors,
         ], 422);
     }
